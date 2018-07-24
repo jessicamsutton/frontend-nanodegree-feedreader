@@ -6,7 +6,7 @@ This is simple website using the Google Feed API to produce a list of articles. 
 * [Tech] (#tech)
 
 ## instructions
-Load the index.html in a browser window and Jasmine will automatically run the tests found in jasmine/spec/feedreader.js
+Load the index.html file in a browser window and Jasmine will automatically run the tests found in jasmine/spec/feedreader.js
 
 ## Tech
 The website is dependent on:

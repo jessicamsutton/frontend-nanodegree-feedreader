@@ -1,11 +1,11 @@
 # Feed Reader Testing
 This is simple website using the Google Feed API to produce a list of articles. Included is a test suite.
 
-## Table of contentSnippet
+## Table of Contents
 * [Instructions] (#instructions)
 * [Tech] (#tech)
 
-## instructions
+## Instructions
 Load the index.html file in a browser window and Jasmine will automatically run the tests found in jasmine/spec/feedreader.js
 
 ## Tech

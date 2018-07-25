@@ -53,7 +53,9 @@ $(function() {
 
     describe('Initial Entries', function() {
         /* Tests that, at a minimum, the loadFeed function
-         * produces a single .entry element in the .feed container
+         * produces a single .entry element in the .feed container.
+         * The loadFeed function is called and afterwards, the feed is
+         * checked for en entry.
          */
          beforeEach(function(done) {
            loadFeed(0, function() {
@@ -69,7 +71,13 @@ $(function() {
 
     describe('New Feed Selection', function () {
         /* Tests that the loadFeed() function displays
-         * new content upon being called again
+         * new content upon being called. The loadFeed
+         * function is called using the first defined feed (index 0).
+         * The results contained within the .feed container are stored
+         * in a variable. loadFeed() is called a second time, using the second
+         * defined feed (index 1), and the results are stored in a
+         * separate variable. The first and second variables are compared
+         * to make sure they are different.
          */
         let first, second;
         beforeEach(function(done) {

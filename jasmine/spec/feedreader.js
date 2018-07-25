@@ -13,7 +13,6 @@ $(function() {
         it('have a defined URL', function() {
             for (let feed of allFeeds) {
               expect(feed.url).toBeDefined();
-              expect(feed.url).not.toBe(undefined);
             }
           });
 
@@ -23,7 +22,6 @@ $(function() {
         it('have a defined name', function() {
             for (let feed of allFeeds) {
               expect(feed.name).toBeDefined();
-              expect(feed.name).not.toBe(undefined);
             }
         });
     });
@@ -54,8 +52,6 @@ $(function() {
     describe('Initial Entries', function() {
         /* Tests that, at a minimum, the loadFeed function
          * produces a single .entry element in the .feed container.
-         * The loadFeed function is called and afterwards, the feed is
-         * checked for en entry.
          */
          beforeEach(function(done) {
            loadFeed(0, function() {
@@ -71,27 +67,21 @@ $(function() {
 
     describe('New Feed Selection', function () {
         /* Tests that the loadFeed() function displays
-         * new content upon being called. The loadFeed
-         * function is called using the first defined feed (index 0).
-         * The results contained within the .feed container are stored
-         * in a variable. loadFeed() is called a second time, using the second
-         * defined feed (index 1), and the results are stored in a
-         * separate variable. The first and second variables are compared
-         * to make sure they are different.
+         * new content upon being called.
          */
         let first, second;
         beforeEach(function(done) {
             loadFeed(0, function() {
                 first = document.querySelector('.feed').innerHTML;
-            });
-            loadFeed(1, function() {
-                second = document.querySelector('.feed').innerHTML;
-                done();
+                loadFeed(1, function() {
+                    second = document.querySelector('.feed').innerHTML;
+                    done();
+                });
             });
         });
 
         it('displays new content', function() {
-            expect(first !== second).toBe(true);
+            expect(first).not.toEqual(second);
         });
     });
 }());

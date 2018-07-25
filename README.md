@@ -1,5 +1,5 @@
 # Feed Reader Testing
-This is simple website using the Google Feed API to produce a list of articles. Included is a test suite.
+This is simple website using the Google Feed API to produce a list of articles. Included are test suites for the menu and the feed reader.
 
 ## Table of Contents
 * [Instructions] (#instructions)
@@ -14,5 +14,5 @@ The website is dependent on:
 * [jQuery]
 * [IcoMoon]
 
-The test suite is dependent on:
+The test suites are dependent on:
 * [Jasmine]
